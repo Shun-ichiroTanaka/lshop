@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+
+  &:hover {
+    color: lighten($text-color, 40%);
+  }
+}
+
+.logo a {
+  color: $white;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
