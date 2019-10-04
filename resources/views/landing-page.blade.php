@@ -47,7 +47,7 @@
 
             <div class="container">
 
-                <h1 class="text-center">Laravel Ecommerce</h1>
+                <h1 class="text-center">Best Surfboards</h1>
                 <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vitae nisi, consequuntur illum dolores cumque pariatur quis provident deleniti nesciunt officia est reprehenderit sunt aliquid possimus temporibus enim eum hic.</p>
                 <div class="text-center button-container">
                     <a href="#" class="button">Featured</a>
@@ -65,50 +65,17 @@
                 </div>
 
                 <div class="products text-center">
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="/img/product1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Surfboard</div></a>
-                        <div class="product-price">30,000円</div>
-                    </div>
+                    @foreach ($products as $product)
+                        <div class="product">
+                            <a href="{{ route('shop.show', $product->slug) }}"><img src="{{ 'img/products/'.$product->slug.'.jpg' }}" alt="product"></a>
+                            <a href="{{ route('shop.show', $product->slug) }}"><div class="product-name">{{ $product->name }}</div></a>
+                            <div class="product-price">{{ $product->presentPrice() }}</div>
+                        </div>
+                    @endforeach
                 </div> <!-- end products -->
 
                 <div class="text-center button-container">
-                    <a href="#" class="button">View more products</a>
+                    <a href="{{ route('shop.index') }}" class="button">View more products</a>
                 </div>
 
             </div> <!-- end container -->
