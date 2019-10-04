@@ -1,13 +1,7 @@
 <?php
 
-use Gloudemans\Shoppingcart\Facades\Cart;
-
-
-// Route::redirect('/', '/en');
-// Route::group(['prefix' => '{language}'], function () {
-// });
-
 Route::get('/', 'LandingPageController@index')->name('landing-page');
+
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
@@ -19,7 +13,7 @@ Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSave
 Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
 Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
 
-Route::view('/checkout', 'checkout');
-Route::view('/thankyou', 'thankyou');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
-
+Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');

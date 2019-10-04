@@ -114,8 +114,8 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="#" class="button">買い物を続ける</a>
-                <a href="#" class="button-primary">レジに進む</a>
+                <a href="{{ route('shop.index') }}" class="button">買い物を続ける</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary">レジに進む</a>
             </div>
 
             @else
