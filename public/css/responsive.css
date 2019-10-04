@@ -21,14 +21,14 @@
 
   header.with-background .top-nav ul,
   header .top-nav ul {
-    margin: 20px auto 0;
     width: 80%;
+    margin: 20px auto 0;
   }
 
   header.with-background .hero,
   header .hero {
-    grid-template-columns: 1fr;
     text-align: center;
+    grid-template-columns: 1fr;
   }
 
   header.with-background .hero .hero-image,
@@ -46,9 +46,9 @@
   }
 
   .blog-section .blog-posts {
-    grid-template-columns: 1fr;
     text-align: center;
     grid-template-areas: "blog3" "blog2" "blog1";
+    grid-template-columns: 1fr;
   }
 
   .blog-section .blog-posts .blog-post {
@@ -64,8 +64,8 @@
   }
 
   .footer-content ul {
-    margin: 20px auto;
     width: 60%;
+    margin: 20px auto;
   }
 
   .breadcrumbs {
