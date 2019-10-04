@@ -2,8 +2,12 @@
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-Route::get('/', 'LandingPageController@index')->name('landing-page');
 
+// Route::redirect('/', '/en');
+// Route::group(['prefix' => '{language}'], function () {
+// });
+
+Route::get('/', 'LandingPageController@index')->name('landing-page');
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
@@ -17,3 +21,5 @@ Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@swit
 
 Route::view('/checkout', 'checkout');
 Route::view('/thankyou', 'thankyou');
+
+
