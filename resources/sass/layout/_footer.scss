@@ -1,24 +1,23 @@
 footer {
-    background: $gray-background;
-    color: $white;
-    padding: 40px 0;
-  }
+  padding: 40px 0;
+  color: $white;
+  background: $gray-background;
+}
 
-  .footer-content {
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
     display: flex;
     justify-content: space-between;
-
-    .heart {
-      color: $heart;
-    }
-
-    ul {
-      display: flex;
-      width: 30%;
-      justify-content: space-between;
-    }
-
-    a {
-      color: $white;
-    }
   }
+
+  li {
+    padding: 0 8px;
+  }
+
+  a {
+    color: $white;
+  }
+}
