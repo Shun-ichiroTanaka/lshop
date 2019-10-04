@@ -149,6 +149,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Nunito", sans-serif !important;
+}
+
 *,
 *:before,
 *:after {
@@ -333,7 +337,7 @@ table {
 }
 
 body {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
@@ -343,7 +347,7 @@ h1,
 h2,
 .product-section-subtitle,
 .product-section-price {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: bold;
 }
 
@@ -519,9 +523,8 @@ form button[type=submit] {
 }
 
 header.with-background {
-  background: url("/img/triangles.svg");
-  background-size: cover;
   color: #e9e9e9;
+  background-color: #60c0eb;
 }
 
 header.with-background .top-nav {
@@ -532,15 +535,15 @@ header.with-background .top-nav {
 }
 
 header.with-background .top-nav .logo {
-  font-weight: bold;
   font-size: 28px;
+  font-weight: bold;
 }
 
 header.with-background .top-nav ul {
   display: flex;
-  text-transform: uppercase;
   justify-content: space-between;
   width: 40%;
+  text-transform: uppercase;
 }
 
 header.with-background .top-nav ul a {
@@ -553,10 +556,10 @@ header.with-background .top-nav ul a:hover {
 
 header.with-background .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
   padding-top: 20px;
   padding-bottom: 84px;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
 }
 
 header.with-background .hero .hero-image {
@@ -564,8 +567,8 @@ header.with-background .hero .hero-image {
 }
 
 header.with-background .hero h1 {
-  font-size: 52px;
   margin-top: 50px;
+  font-size: 52px;
 }
 
 header.with-background .hero p {
@@ -576,10 +579,6 @@ header.with-background .hero .button {
   margin-right: 14px;
 }
 
-header {
-  background: #535353;
-}
-
 header .top-nav {
   display: flex;
   justify-content: space-between;
@@ -588,18 +587,18 @@ header .top-nav {
 }
 
 header .top-nav .logo {
-  font-weight: bold;
-  font-size: 28px;
   color: #e9e9e9;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 header .top-nav ul {
   display: flex;
-  text-transform: uppercase;
   justify-content: space-between;
   width: 40%;
   padding-top: 8px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 header .top-nav ul a {
@@ -612,19 +611,19 @@ header .top-nav ul a:hover {
 
 header .top-nav ul .cart-count {
   display: inline-block;
-  background: #ffd94d;
-  color: #212121;
-  line-height: 0;
-  border-radius: 50%;
+  color: #e9e9e9;
   font-size: 14px;
+  line-height: 0;
+  background: #f66d9b;
+  border-radius: 50%;
 }
 
 header .top-nav ul .cart-count span {
   display: inline-block;
   padding-top: 50%;
   padding-bottom: 50%;
-  margin-left: 6px;
   margin-right: 6px;
+  margin-left: 6px;
 }
 
 footer {
@@ -658,8 +657,8 @@ footer {
 
 .featured-section .products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 60px 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .featured-section .products .product-price {
@@ -667,18 +666,18 @@ footer {
 }
 
 .blog-section {
+  padding: 50px 0;
   background: #f5f5f5;
   border-top: 1px solid #cdcdcd;
-  padding: 50px 0;
   grid-area: blog-section;
 }
 
 .blog-section .blog-posts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
   margin: 60px 0 60px;
+  grid-gap: 30px;
   grid-template-areas: "blog1 blog2 blog3";
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .blog-section .blog-posts #blog1 {

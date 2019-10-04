@@ -1,112 +1,113 @@
 header.with-background {
-    background: url('/img/triangles.svg');
-    background-size: cover;
-    color: $white;
+  color: $white;
+  //   background: url("/img/10.jpg");
+  background-color: #60c0eb;
+  //   background-repeat: no-repeat;
+  //   background-position-x: 3rem;
+  //   background-size: cover;
 
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 0;
-      letter-spacing: 1.5px;
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    letter-spacing: 1.5px;
 
-      .logo {
-        font-weight: bold;
-        font-size: 28px;
-      }
-
-      ul {
-        display: flex;
-        text-transform: uppercase;
-        justify-content: space-between;
-        width: 40%;
-
-        a {
-          color: $white;
-          &:hover {
-            color: darken($white, 10%);
-          }
-        }
-
-      }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
-      grid-gap: $gutter;
-      padding-top: 20px;
-      padding-bottom: 84px;
-
-      .hero-image {
-        padding-left: 60px;
-      }
-
-      h1 {
-        font-size: 52px;
-        margin-top: 50px;
-      }
-
-      p {
-        margin: 40px 0 68px;
-      }
-
-      .button {
-        margin-right: 14px;
-      }
-    }
-  }
-
-  header {
-    background: $gray-background;
-
-    .top-nav {
+    ul {
       display: flex;
       justify-content: space-between;
-      padding: 30px 0;
-      letter-spacing: 1.5px;
+      width: 40%;
+      text-transform: uppercase;
 
-      .logo {
-        font-weight: bold;
-        font-size: 28px;
+      a {
         color: $white;
-      }
-
-      ul {
-        display: flex;
-        text-transform: uppercase;
-        justify-content: space-between;
-        width: 40%;
-        padding-top: 8px;
-        font-weight: 400;
-
-        a {
-          color: $white;
-          &:hover {
-            color: darken($white, 10%);
-          }
+        &:hover {
+          color: darken($white, 10%);
         }
-
-        .cart-count {
-          display: inline-block;
-          // position: absolute;
-          // right: 0;
-          // top: -22px;
-          // right: -24px;
-          background: $cart-count;
-          color: $text-color;
-          line-height: 0;
-          border-radius: 50%;
-          font-size: 14px;
-
-          span {
-            display: inline-block;
-            padding-top: 50%;
-            padding-bottom: 50%;
-            margin-left:6px;
-            margin-right:6px;
-          }
-        }
-
       }
     }
   }
+
+  .hero {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 84px;
+
+    grid-gap: $gutter;
+    grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
+
+    .hero-image {
+      padding-left: 60px;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 52px;
+    }
+
+    p {
+      margin: 40px 0 68px;
+    }
+
+    .button {
+      margin-right: 14px;
+    }
+  }
+}
+
+header {
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    letter-spacing: 1.5px;
+
+
+    .logo {
+      color: $white;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      padding-top: 8px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      a {
+        color: $white;
+        &:hover {
+          color: darken($white, 10%);
+        }
+      }
+
+      .cart-count {
+        display: inline-block;
+        color: $white;
+        font-size: 14px;
+        line-height: 0;
+        // position: absolute;
+        // right: 0;
+        // top: -22px;
+        // right: -24px;
+        background: $pink;
+        border-radius: 50%;
+
+        span {
+          display: inline-block;
+          padding-top: 50%;
+          padding-bottom: 50%;
+          margin-right: 6px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
