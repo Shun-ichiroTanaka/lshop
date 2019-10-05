@@ -11,8 +11,8 @@
 @section('content')
 
    <div class="thank-you-section">
-       <h1>Thank you for <br> Your Order!</h1>
-       <p>A confirmation email was sent</p>
+       <h1>お買い上げ <br> ありがとうございます。</h1>
+       <p>確認メールが送信されました。</p>
        <div class="spacer"></div>
        <div>
            <a href="{{ url('/') }}" class="button">Home Page</a>

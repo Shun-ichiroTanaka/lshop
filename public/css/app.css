@@ -895,9 +895,9 @@ h1.checkout-heading {
 
 .checkout-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
   margin: 40px auto 80px;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .checkout-section .checkout-table-container {
@@ -912,8 +912,8 @@ h1.checkout-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #919191;
   padding: 14px 0;
+  border-top: 1px solid #919191;
 }
 
 .checkout-section .checkout-table-row:last-child {
@@ -944,17 +944,17 @@ h1.checkout-heading {
 }
 
 .checkout-section .checkout-table-row .checkout-table-quantity {
-  border: 1px solid #919191;
   padding: 4px 12px;
   margin-right: 5px;
+  border: 1px solid #919191;
 }
 
 .checkout-section .checkout-totals {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #919191;
   padding: 18px 0;
   line-height: 2;
+  border-bottom: 1px solid #919191;
 }
 
 .checkout-section .checkout-totals .checkout-totals-right {
@@ -962,9 +962,37 @@ h1.checkout-heading {
 }
 
 .checkout-section .checkout-totals .checkout-totals-total {
-  font-weight: bold;
   font-size: 22px;
+  font-weight: bold;
   line-height: 2.2;
+}
+
+.checkout-section label {
+  color: #535353;
+  font-size: 0.8em;
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+
+.StripeElement {
+  padding: 16px 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+#card-errors {
+  color: #fa755a;
 }
 
 .thank-you-section {
