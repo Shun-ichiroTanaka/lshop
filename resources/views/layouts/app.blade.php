@@ -76,5 +76,8 @@
             @yield('content')
         </main>
     </div>
+    <router-view></router-view>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
+
 </html>
