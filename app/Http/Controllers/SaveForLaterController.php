@@ -37,12 +37,12 @@ class SaveForLaterController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', '商品はすでにカートに保存されています');
+            return redirect()->route('cart.index')->with('success_message', '商品はすでにカートに追加されています');
         }
 
         Cart::instance('default')->add($item->id, $item->name, 1, $item->price)
             ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', '商品をカートに登録しました!');
+        return redirect()->route('cart.index')->with('success_message', '商品をカートに追加しました!');
     }
 }

@@ -10,11 +10,11 @@ import Vue from 'vue'
 window.Vue = require('vue');
 
 
-import VueRouter from 'vue-router'
-Vue.use(VueRouter);
+// import VueRouter from 'vue-router'
+// Vue.use(VueRouter);
 
-import VuePageTransition from 'vue-page-transition'
-Vue.use(VuePageTransition)
+// import VuePageTransition from 'vue-page-transition'
+// Vue.use(VuePageTransition)
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,8 +27,8 @@ Vue.use(VuePageTransition)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('language-switcher', require('./components/Transition.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('language-switcher', require('./components/Transition.vue').default);
 
 
 // vue-routerのインスタンス化、オプションroutesでアクセスされるパスとその時に表示するComponentを指定
@@ -50,7 +50,7 @@ Vue.component('language-switcher', require('./components/Transition.vue').defaul
  */
 
 
-const app = new Vue({
-    router,
-    el: '#app',
-});
+// const app = new Vue({
+//     router,
+//     el: '#app',
+// });

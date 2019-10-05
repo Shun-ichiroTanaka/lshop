@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
-
+use Illuminate\Support\Facades\Validator;
 
 class CartController extends Controller
 {
@@ -16,24 +16,13 @@ class CartController extends Controller
      */
     public function index()
     {
-        $mightAlsoLike = Product::MightAlsoLike()->get();
+        $mightAlsoLike = Product::mightAlsoLike()->get();
 
-        return view('cart')->with('mightAlsoLike',$mightAlsoLike );
+        return view('cart')->with('mightAlsoLike', $mightAlsoLike);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-
-    /**
-     * カートに商品を追加したときの処理
+     * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -45,37 +34,13 @@ class CartController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', 'その商品はすでにカートに入っています');
+            return redirect()->route('cart.index')->with('success_message', '商品はすでにカートに追加されています!');
         }
 
         Cart::add($request->id, $request->name, 1, $request->price)
             ->associate('App\Product');
 
         return redirect()->route('cart.index')->with('success_message', '商品がカートに追加されました!');
-    }
-
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
@@ -87,21 +52,32 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,5'
+        ]);
+
+        if ($validator->fails()) {
+            session()->flash('errors', collect(['同じ商品は5つまでしか買えません。']));
+            return response()->json(['success' => false], 400);
+        }
+
+        Cart::update($id, $request->quantity);
+        session()->flash('success_message', '数量が更新されました!');
+        return response()->json(['success' => true]);
     }
 
     /**
-     * カートから商品を削除し、成功したらアラートを表示する
+     * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    //
-    public function destroy($id){
+    public function destroy($id)
+    {
         Cart::remove($id);
-        return back()->with('success_message', '商品をカートから削除しました');
-    }
 
+        return back()->with('success_message', 'カートから商品を削除しました!');
+    }
 
     /**
      * Switch item for shopping cart to Save for Later.
@@ -120,12 +96,12 @@ class CartController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', '「あとで買う」にすでに登録されています');
+            return redirect()->route('cart.index')->with('success_message', '商品はすでに「あとで買う」に追加されています!');
         }
 
         Cart::instance('saveForLater')->add($item->id, $item->name, 1, $item->price)
             ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', '「あとで買う」に登録しました!');
+        return redirect()->route('cart.index')->with('success_message', '商品を「あとで買う」に追加しました!');
     }
 }
