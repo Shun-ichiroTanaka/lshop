@@ -1,17 +1,30 @@
 .products-section {
+  display: grid;
+  margin: 80px auto 80px;
+
+  grid-template-columns: 1fr 3fr;
+
+  .sidebar li.active {
+    font-weight: 500;
+  }
+
+  .products {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 80px auto 80px;
 
-    .products {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 60px $gutter;
+    grid-gap: 60px $gutter;
+    grid-template-columns: 1fr 1fr 1fr;
 
-        .product-price {
-          color: $text-color-light;
-        }
+    .product-price {
+      color: $text-color-light;
     }
+  }
 }
 
+.products-header {
+  display: flex;
+  justify-content: space-between;
+}
 
+.sortbyPrice {
+  font-size: .8em;
+}

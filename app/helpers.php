@@ -8,3 +8,8 @@ function presentPrice($price)
     return money_format('%n', (int)$price) . "\n";
 }
 
+
+function setActiveCategory($category, $output = 'active')
+{
+    return request()->category == $category ? $output : '';
+}
