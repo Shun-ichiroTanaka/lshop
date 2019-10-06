@@ -3,6 +3,8 @@
 function presentPrice($price)
 {
     // $priceを(int)で数字設定しないと文字列として扱われてしまう
-    return money_format("?%n", (int)$price );
+    // 日本での通過設定
+    setlocale(LC_MONETARY, 'ja_JP');
+    return money_format('%n', (int)$price) . "\n";
 }
 

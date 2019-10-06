@@ -6,10 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
+    }
+
     public function presentPrice()
     {
-
-        return money_format('¥%n', (int)$this->price );
+        // ????????
+        setlocale(LC_MONETARY, 'ja_JP');
+        return money_format('%n', (int)$this->price) . "\n";
     }
 
     public function scopeMightAlsoLike($query)

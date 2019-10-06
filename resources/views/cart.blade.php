@@ -111,7 +111,7 @@
                     <div class="cart-totals-subtotal">
                         {{ presentPrice(Cart::subtotal()) }} <br>
                         {{ presentPrice(Cart::tax()) }} <br>
-                        <span class="cart-totals-total">¥ {{ presentPrice(Cart::total()) }}</span>
+                        <span class="cart-totals-total"> {{ presentPrice(Cart::total()) }}</span>
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
