@@ -21,14 +21,18 @@ class ShopController extends Controller
                 $query->where('slug', request()->category);
             })->get();
             $categories = Category::all();
+            $categoryName = $categories->where('slug', request()->category)->first()->name;
+
         }else {
             $products = Product::inRandomOrder()->take(12)->get();
             $categories = Category::all();
+            $categoryName ='注目の商品';
         }
 
         return view('shop')->with([
             'products'=> $products,
             'categories' => $categories,
+            'categoryName' => $categoryName,
             ]);
     }
 
