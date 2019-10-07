@@ -5,9 +5,19 @@
  */
 
 require('./bootstrap');
+require('./transition');
 
 import Vue from 'vue'
 window.Vue = require('vue');
+
+
+import Highway from '@dogstudio/highway';
+import Fade from './transition';
+const H = new Highway.Core({
+    transitions: {
+        default: Fade
+    }
+});
 
 
 // import VueRouter from 'vue-router'

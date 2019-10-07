@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 一覧
      *
      * @return \Illuminate\Http\Response
      */
@@ -45,7 +45,7 @@ class ShopController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * 詳細画面へ
      *
      * @param  string  $slug
      * @return \Illuminate\Http\Response

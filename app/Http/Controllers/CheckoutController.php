@@ -34,7 +34,6 @@ class CheckoutController extends Controller
         })->values()->toJson();
 
         try {
-            Stripe::setApiKey(env('sk_test_yD58p8ld0qXUObnngQKlnLt400G0xl5Jn0'));
             $charge = Stripe::charges()->create([
                 'amount' => Cart::total(),
                 'currency' => 'CAD',

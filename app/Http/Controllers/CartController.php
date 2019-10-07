@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class CartController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * オススメ商品の表示
      *
      * @return \Illuminate\Http\Response
      */
@@ -22,7 +22,7 @@ class CartController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 新しくカートに追加されたとき、すでにあるときはNOメッセージ、ないときは成功メッセージを表示
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -44,7 +44,7 @@ class CartController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * カートの数量を更新するとき、5つ以上はエラー、それ以上は成功でJSONファイルに保存
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -67,7 +67,7 @@ class CartController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * カートから商品の削除
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -80,7 +80,7 @@ class CartController extends Controller
     }
 
     /**
-     * Switch item for shopping cart to Save for Later.
+     * カートの商品をあとで買うに変更する
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

@@ -13,7 +13,7 @@ class Product extends Model
 
     public function presentPrice()
     {
-        // ????????
+        //　日本用に設定
         setlocale(LC_MONETARY, 'ja_JP');
         return money_format('%n', (int)$this->price) . "\n";
     }
