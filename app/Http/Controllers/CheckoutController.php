@@ -66,8 +66,8 @@ class CheckoutController extends Controller
         $tax = config('cart.tax');
         $discount = session()->get('coupon')['discount'] ?? 0;
         $newSubtotal = ((int)Cart::subtotal() - (int)$discount);
-        $newTax = $newSubtotal * $tax;
-        $newTotal = $newSubtotal * (1 + $tax);
+        $newTax = (int)$newSubtotal * (int)$tax;
+        $newTotal = (int)$newSubtotal * (1 + (int)$tax);
 
         return collect([
             'tax' => $tax,

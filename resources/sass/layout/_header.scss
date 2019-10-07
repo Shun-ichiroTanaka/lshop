@@ -11,6 +11,9 @@ header.with-background {
     .logo {
       font-size: 28px;
       font-weight: bold;
+      a {
+        color: $text-color;
+      }
     }
 
     ul {
@@ -68,6 +71,9 @@ header {
       font-size: 28px;
       font-weight: bold;
     }
+    #h-title {
+      color: $text-color;
+    }
 
     ul {
       display: flex;
@@ -78,22 +84,20 @@ header {
       text-transform: uppercase;
 
       a {
-        color: $white;
+        color: $text-color;
         &:hover {
-          color: darken($white, 10%);
+          color: darken($text-color-light, 10%);
         }
       }
 
       .cart-count {
+        position: absolute;
         display: inline-block;
+        margin-left: 3px;
         color: $white;
         font-size: 14px;
         line-height: 0;
-        // position: absolute;
-        // right: 0;
-        // top: -22px;
-        // right: -24px;
-        background: $pink;
+        background: $red;
         border-radius: 50%;
 
         span {
