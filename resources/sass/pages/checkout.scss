@@ -4,11 +4,10 @@ h1.checkout-heading {
 
 .checkout-section {
   display: grid;
-  margin: 40px auto 80px;
-  // grid-column-gap: 10px;
-
-  grid-gap: 30px;
   grid-template-columns: 1fr 1fr;
+  // grid-column-gap: 10px;
+  grid-gap: 30px;
+  margin: 40px auto 80px;
 
   .checkout-table-container {
     margin-left: 124px;
@@ -22,15 +21,14 @@ h1.checkout-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
     border-top: 1px solid $text-color-light;
+    padding: 14px 0;
 
     &:last-child {
       border-bottom: 1px solid $text-color-light;
     }
 
-    .checkout-table-row-left,
-    .checkout-table-row-right {
+    .checkout-table-row-left, .checkout-table-row-right {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -58,43 +56,42 @@ h1.checkout-heading {
     }
 
     .checkout-table-quantity {
+      border: 1px solid $text-color-light;
       padding: 4px 12px;
       margin-right: 5px;
-      border: 1px solid $text-color-light;
     }
   }
 
   .checkout-totals {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid $text-color-light;
     padding: 18px 0;
     line-height: 2;
-    border-bottom: 1px solid $text-color-light;
 
     .checkout-totals-right {
       text-align: right;
     }
 
     .checkout-totals-total {
-      font-size: 22px;
       font-weight: bold;
+      font-size: 22px;
       line-height: 2.2;
     }
   }
-  label {
-    color: rgb(83, 83, 83);
-    font-size: .8em;
-  }
 }
 
+
+
 /**
- * The CSS shown here will not be introduced in the Quickstart guide, but shows
- * how you can use CSS to style your Element's container.
- */
+* The CSS shown here will not be introduced in the Quickstart guide, but shows
+* how you can use CSS to style your Element's container.
+*/
 .StripeElement {
-  padding: 16px 16px;
   background-color: white;
+  padding: 16px 16px;
   border: 1px solid #ccc;
+
 }
 
 .StripeElement--focus {
