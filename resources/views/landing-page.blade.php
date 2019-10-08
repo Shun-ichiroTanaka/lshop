@@ -48,7 +48,7 @@
                 </div> <!-- end hero-copy -->
 
                 <div class="hero-image">
-                    <img src="img/11.svg" alt="hero image">
+                    <img src="img/13.svg" alt="hero image">
                 </div> <!-- end hero-image -->
             </div> <!-- end hero -->
         </header>

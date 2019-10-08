@@ -115,7 +115,7 @@
                             <img src="{{ asset('img/products/'.$item->model->slug.'.jpg') }}" alt="item" class="checkout-table-img">
                             <div class="checkout-item-details">
                                 <div class="checkout-table-item">{{ $item->model->name }}</div>
-                                <div class="checkout-table-description">{{ $item->model->details }}</div>
+                                <div class="checkout-table-description">{!! $item->model->details !!}</div>
                                 <div class="checkout-table-price">{{ $item->model->presentPrice() }}</div>
                             </div>
                         </div> <!-- end checkout-table -->

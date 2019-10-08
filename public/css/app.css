@@ -969,8 +969,8 @@ form button[type=submit] {
 }
 
 header.with-background {
-  color: #e9e9e9;
-  background-color: #60c0eb;
+  color: #212121;
+  background: #dadada;
 }
 
 header.with-background .top-nav {
@@ -997,11 +997,11 @@ header.with-background .top-nav ul {
 }
 
 header.with-background .top-nav ul a {
-  color: #e9e9e9;
+  color: #212121;
 }
 
 header.with-background .top-nav ul a:hover {
-  color: #d0d0d0;
+  color: #080808;
 }
 
 header.with-background .hero {
@@ -1037,7 +1037,7 @@ header .top-nav {
 }
 
 header .top-nav .logo {
-  color: #e9e9e9;
+  color: #212121;
   font-size: 28px;
   font-weight: bold;
 }
@@ -1085,7 +1085,7 @@ header .top-nav ul .cart-count span {
 footer {
   padding: 40px 0;
   color: #e9e9e9;
-  background: #60c0eb;
+  background: url(/images/14.jpg?bd273926b448caee3fca546b43075cd2);
 }
 
 .footer-content {

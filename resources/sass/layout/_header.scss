@@ -1,7 +1,9 @@
 header.with-background {
-  color: $white;
-  background-color: #60c0eb;
-
+  color: $text-color;
+  background: rgb(218, 218, 218);
+  //   background: url("./public/img/13.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
   .top-nav {
     display: flex;
     justify-content: space-between;
@@ -23,13 +25,13 @@ header.with-background {
       text-transform: uppercase;
 
       a {
-        color: $white;
+        color: $text-color;
         &:hover {
-          color: darken($white, 10%);
+          color: darken($text-color, 10%);
         }
       }
     }
-  }
+  };
 
   .hero {
     display: grid;
@@ -67,7 +69,7 @@ header {
 
 
     .logo {
-      color: $white;
+      color: $text-color;
       font-size: 28px;
       font-weight: bold;
     }
