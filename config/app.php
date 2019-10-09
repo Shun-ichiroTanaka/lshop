@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          */
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        // Package Service Providers
+        TCG\Voyager\VoyagerServiceProvider::class,
 
         /*
          * Application Service Providers...

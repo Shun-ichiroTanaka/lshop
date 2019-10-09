@@ -27,7 +27,7 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'App\\Http\\Controllers\\Voyager',
+        'namespace' => 'App\\Http\\Controllers\\Voyager', //コントローラーの配置先を記述します
     ],
 
     /*
@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-        //'namespace' => 'App\\',
+        'namespace' => 'App\\',
     ],
 
     /*
@@ -189,11 +189,11 @@ return [
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
-        //'css/custom.css',
+        'css/custom.css',
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'js/custom.js',
     ],
 
     'googlemaps' => [
@@ -211,7 +211,7 @@ return [
     'media' => [
         // The allowed mimetypes to be uploaded through the media-manager.
         'allowed_mimetypes' => '*', //All types can be uploaded
-        /*
+
         'allowed_mimetypes' => [
           'image/jpeg',
           'image/png',
@@ -219,7 +219,7 @@ return [
           'image/bmp',
           'video/mp4',
         ],
-        */
+
        //Path for media-manager. Relative to the filesystem.
        'path'                => '/',
        'show_folders'        => true,
@@ -228,7 +228,7 @@ return [
        'allow_delete'        => true,
        'allow_create_folder' => true,
        'allow_rename'        => true,
-       /*'watermark'           => [
+       'watermark'           => [
             'source'         => 'watermark.png',
             'position'       => 'bottom-left',
             'x'              => 0,
@@ -242,6 +242,6 @@ return [
                 'width' => 500,
                 'height'=> 500
            ],
-       ]*/
+       ]
    ],
 ];
