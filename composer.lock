@@ -4976,12 +4976,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "c9dd5a8906ba23846ccba17afe38f2e87de0a651"
+                "reference": "43a98ff56155b1a51b85790afcd2e55279c19c8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/c9dd5a8906ba23846ccba17afe38f2e87de0a651",
-                "reference": "c9dd5a8906ba23846ccba17afe38f2e87de0a651",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/43a98ff56155b1a51b85790afcd2e55279c19c8e",
+                "reference": "43a98ff56155b1a51b85790afcd2e55279c19c8e",
                 "shasum": ""
             },
             "require": {
@@ -5033,7 +5033,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2019-09-17T08:38:29+00:00"
+            "time": "2019-10-09T11:12:39+00:00"
         },
         {
             "name": "test-hook",
