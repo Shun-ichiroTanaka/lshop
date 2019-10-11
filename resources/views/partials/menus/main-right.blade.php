@@ -15,7 +15,10 @@
         </form>
     @endguest
    <li><a href="{{ route('register') }}">Cart
-   <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+   {{-- 0より上の数ならカウントを表示する --}}
+    @if (Cart::instance('default')->count() > 0)
+        <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+    @endif
    </a></li>
 
    {{-- @foreach($items as $menu_item)

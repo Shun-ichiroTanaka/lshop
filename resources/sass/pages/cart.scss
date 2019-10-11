@@ -1,113 +1,113 @@
 .cart-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    margin: 60px auto;
+  display: grid;
+  margin: 60px auto;
 
-    h2 {
-        margin-bottom: 30px;
+  grid-gap: 30px;
+  grid-template-columns: 2fr 1fr;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+
+
+  .cart-table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid $text-color-light;
+
+    &:last-child {
+      border-bottom: 1px solid $text-color-light;
     }
 
-    .cart-table {
-
+    .cart-table-row-left,
+    .cart-table-row-right {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .cart-table-row {
-        display: flex;
-        justify-content: space-between;
-        border-top: 1px solid $text-color-light;
-        padding: 14px 0;
-
-        &:last-child {
-            border-bottom: 1px solid $text-color-light;
-        }
-
-        .cart-table-row-left, .cart-table-row-right {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .cart-table-row-left {
-            width: 50%;
-        }
-
-        .cart-table-row-right {
-            width: 33%;
-            padding-top: 10px;
-        }
-
-        .cart-table-img {
-            max-height: 75px;
-        }
-
-        .cart-table-actions {
-            text-align: right;
-            font-size: 14px;
-        }
-
-        .cart-item-details {
-            padding-top: 5px;
-        }
-
-        .cart-table-description {
-            color: $text-color-light;
-        }
-
-        .cart-options {
-            color: $text-color;
-            background: transparent;
-            font-size: 14px;
-            font-weight: 300;
-            padding: 0;
-
-            &:hover {
-                color: lighten($text-color, 30%);
-            }
-        }
+    .cart-table-row-left {
+      width: 50%;
     }
 
-    .cart-totals {
-        margin: 30px 0;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        background: $light-gray-background;
-
-        .cart-totals-left {
-            width: 50%;
-        }
-
-        .cart-totals-right {
-            display: flex;
-            justify-content: space-between;
-            width: 35%;
-            text-align: right;
-        }
-
-        .cart-totals-total {
-            font-weight: bold;
-            font-size: 22px;
-            line-height: 2;
-        }
+    .cart-table-row-right {
+      width: 33%;
+      padding-top: 10px;
     }
 
-    .cart-buttons {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
+    .cart-table-img {
+      max-height: 75px;
     }
 
-    .have-code {
-        display: block;
-        margin: 14px 0;
-        text-align: right;
+    .cart-table-actions {
+      font-size: 14px;
+      text-align: right;
     }
+
+    .cart-item-details {
+      padding-top: 5px;
+    }
+
+    .cart-table-description {
+      color: $text-color-light;
+    }
+
+    .cart-options {
+      padding: 0;
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 300;
+      background: transparent;
+
+      &:hover {
+        color: lighten($text-color, 30%);
+      }
+    }
+  }
+
+  .cart-totals {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 30px 0;
+    background: $light-gray-background;
+
+    .cart-totals-left {
+      width: 50%;
+    }
+
+    .cart-totals-right {
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+      text-align: right;
+    }
+
+    .cart-totals-total {
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 2;
+    }
+  }
+
+  .cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .have-code {
+    display: block;
+    margin: 14px 0;
+    text-align: right;
+  }
 
   .have-code-container {
-    border: 1px solid $text-color-light;
-    padding: 16px;
     width: 50%;
+    padding: 16px;
     margin-left: auto;
+    border: 1px solid $text-color-light;
 
     form {
       display: flex;
@@ -121,10 +121,10 @@
     }
 
     input[type="submit"] {
-      background: white;
-      border: 1px solid $text-color-light;
       padding-top: 8px;
       padding-bottom: 8px;
+      background: white;
+      border: 1px solid $text-color-light;
 
       &:hover {
         background: $text-color;
@@ -132,9 +132,3 @@
     }
   }
 }
-
-
-
-
-
-

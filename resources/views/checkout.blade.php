@@ -41,11 +41,11 @@
 
                     <div class="form-group">
                         <label for="email">メールアドレス</label>
-                        <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
+                        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" required>
                     </div>
                     <div class="form-group">
                         <label for="name">お名前</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ auth()->user()->name }}" required>
                     </div>
                     <div class="form-group">
                         <label for="address">住所</label>
@@ -133,16 +133,11 @@
                         Subtotal <br>
                         @if (session()->has('coupon'))
                             Discount ({{ session()->get('coupon')['name'] }}) :
-                            <form action="{{ route('coupon.destroy') }}" method="POST" style="display:inline">
-                                {{ csrf_field() }}
-                                {{ method_field('delete') }}
-                                <button type="submit" style="font-size:14px">Remove</button>
-                            </form>
                             <br>
                             <hr>
                             New Subtotal <br>
                         @endif
-                        Tax (10%)<br>
+                        Tax ({{config('cart.tax')}}%)<br>
                         <span class="checkout-totals-total">Total</span>
 
                     </div>
@@ -150,12 +145,12 @@
                     <div class="checkout-totals-right">
                         {{ presentPrice(Cart::subtotal()) }} <br>
                         @if (session()->has('coupon'))
-                            -{{ presentPrice($discount ?? '') }} <br>
+                            -{{ presentPrice($discount) }} <br>
                             <hr>
-                            {{ presentPrice($newSubtotal ?? '') }} <br>
+                            {{ presentPrice($newSubtotal) }} <br>
                         @endif
-                        {{ presentPrice($newTax ?? '') }} <br>
-                        <span class="checkout-totals-total">{{ presentPrice($newTotal ?? '') }}</span>
+                        {{ presentPrice($newTax) }} <br>
+                        <span class="checkout-totals-total">{{ presentPrice($newTotal) }}</span>
 
                     </div>
                 </div> <!-- end checkout-totals -->
@@ -171,7 +166,9 @@
                         <button type="submit" class="button button-plain">Apply</button>
                     </form>
                 </div> <!-- end have-code-container -->
+
                 @endif
+
 
             </div>
 
