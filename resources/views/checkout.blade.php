@@ -25,7 +25,7 @@
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li>{!! $error !!}</li>
                     @endforeach
                 </ul>
             </div>
@@ -181,7 +181,7 @@
     <script>
         (function(){
             // Create a Stripe client
-            var stripe = Stripe('pk_test_qtJcYFL8MZZ05kWQN7R3uUvm00cAGb1emm');
+            var stripe = Stripe('pk_test_MfltUHaOmAWWHNIgWMWIreXj00kB3b7fwO');
 
             // Create an instance of Elements
             var elements = stripe.elements();

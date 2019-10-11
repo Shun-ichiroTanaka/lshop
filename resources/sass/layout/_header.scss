@@ -95,9 +95,9 @@ header {
       }
 
       a {
-        color: $white;
+        color: $text-color;
         &:hover {
-          color: darken($white, 10%);
+          color: darken($white, 30%);
         }
       }
 
