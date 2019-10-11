@@ -49,6 +49,9 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
+    // ==================================================
+    // ログイン後は、セッション情報からログイン前のページに遷移する
+    // ==================================================
     public function redirectTo()
     {
         return str_replace(url('/'), '', session()->get('previousUrl', '/'));
