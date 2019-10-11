@@ -6,15 +6,7 @@
 
 require('./bootstrap');
 
-import Vue from 'vue'
 window.Vue = require('vue');
-
-
-// import VueRouter from 'vue-router'
-// Vue.use(VueRouter);
-
-// import VuePageTransition from 'vue-page-transition'
-// Vue.use(VuePageTransition)
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,21 +19,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-// Vue.component('language-switcher', require('./components/Transition.vue').default);
-
-
-// vue-routerのインスタンス化、オプションroutesでアクセスされるパスとその時に表示するComponentを指定
-// const router = new VueRouter({
-//     mode: 'history',
-//     routes: [
-//         // TOPページ
-//         { path: '/', component: require('./components/Articles/Index.vue') },
-//         // 記事投稿フォームページ
-//         { path: '/article/create', component: require('./components/Articles/Create.vue') },
-//     ]
-// });
-
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -49,8 +27,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
-// const app = new Vue({
-//     router,
-//     el: '#app',
-// });
+const app = new Vue({
+    el: '#app',
+});
