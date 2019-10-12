@@ -11,43 +11,33 @@
        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+       {{-- js --}}
+       <script src="{{ mix('js/app.js') }}"></script>
+
        <!-- Styles -->
        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
    </head>
    <body>
-       <header class="with-background">
-           <div class="top-nav container">
-               <div class="top-nav-left">
-                   <div class="logo">Ecommerce</div>
-                   {{ menu('main', 'partials.menus.main') }}
-               </div>
-               <div class="top-nav-right">
-                   @include('partials.menus.main-right')
-               </div>
-           </div> <!-- end top-nav -->
-           <div class="hero container">
-               <div class="hero-copy">
-                   <h1>Surfboard Shop For All Surfers</h1>
-                   <p>あなたのための最高のサーフボードをお届けします。</p>
-                   <div class="hero-buttons">
-                       <a href="#" class="button button-white">Blog Post</a>
-                       <a href="#" class="button button-white">GitHub</a>
-                   </div>
-               </div> <!-- end hero-copy -->
+       <header class="with-background" id="app">
+            <div class="top-nav container">
+                <div class="top-nav-left">
+                    <div class="logo">EC-Laravel</div>
+                    {{ menu('main', 'partials.menus.main') }}
+                </div>
+                <div class="top-nav-right">
+                    @include('partials.menus.main-right')
+                </div>
+            </div> <!-- end top-nav -->
+            <particle></particle>
 
-               <div class="hero-image">
-                   <img src="img/13.svg" alt="hero image">
-               </div> <!-- end hero-image -->
-           </div> <!-- end hero -->
        </header>
 
        <div class="featured-section">
 
            <div class="container">
-
-               <h1 class="text-center">Best Surfboards</h1>
+               <h1 id="type" class="text-center"></h1>
                <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vitae nisi, consequuntur illum dolores cumque pariatur quis provident deleniti nesciunt officia est reprehenderit sunt aliquid possimus temporibus enim eum hic.</p>
                <div class="text-center button-container">
                    <a href="#" class="button">Featured</a>
@@ -110,6 +100,10 @@
 
        @include('partials.footer')
 
-
+    {{-- jsの読み込み --}}
+    <script src=" {{ mix('js/app.js') }} "></script>
    </body>
 </html>
+<script>
+
+</script>

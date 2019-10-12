@@ -1,43 +1,68 @@
 .button {
-    border: 1px solid $text-color;
-    padding: 12px 40px;
+  padding: 12px 40px;
+  border: 1px solid $text-color;
 
-    &:hover {
-        color: $white;
-        background: $text-color;
-    }
+  &:hover {
+    color: $white;
+    background: $text-color;
+  }
 }
 
 .button-white {
-    border: 1px solid $white;
-    color: $white !important;
+  color: $white !important;
+  border: 1px solid $white;
 
-    &:hover {
-        color: $text-color !important;
-        background: $white;
-    }
+  &:hover {
+    color: $text-color !important;
+    background: $white;
+  }
 }
 
+.button-green {
+  color: #fff !important;
+  background: #60beaa;
+  border: 1px solid #fff;
+
+  &:hover {
+    color: #60beaa !important;
+    background: #fff;
+    border: 1px solid #60beaa;
+  }
+}
+
+.button-outline-green {
+  color: #60beaa !important;
+  background: #fff;
+  border: 1px solid #60beaa;
+
+  &:hover {
+    color: #fff !important;
+    background: #60beaa;
+    border: 1px solid #fff;
+  }
+}
+
+
 .button-primary {
-    background: $primary;
-    color: white !important;
-    padding: 12px 40px;
+  padding: 12px 40px;
+  color: white !important;
+  background: $primary;
 
-    &:hover {
-        background: darken($primary, 7%);
-    }
+  &:hover {
+    background: darken($primary, 7%);
+  }
 
-    &:disabled {
-        background: lighten($primary, 10%);
-        cursor: not-allowed;
-    }
+  &:disabled {
+    background: lighten($primary, 10%);
+    cursor: not-allowed;
+  }
 }
 
 .button-plain {
-    border: 1px solid $text-color !important;
-    background: transparent;
+  background: transparent;
+  border: 1px solid $text-color !important;
 }
 
 .button-container {
-    margin: 80px 0;
+  margin: 80px 0;
 }
