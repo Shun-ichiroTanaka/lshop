@@ -231,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class
 
     ],
 

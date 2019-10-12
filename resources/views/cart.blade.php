@@ -66,6 +66,7 @@
                             </form>
                         </div>
                         <div>
+                            {{-- 数量指定 --}}
                             <select class="quantity" data-id="{{ $item->rowId }}">
                                 @for ($i = 1; $i < 5 + 1 ; $i++)
                                     <option {{ $item->qty == $i ? 'selected' : '' }}>{{ $i }}</option>

@@ -159,7 +159,8 @@ body,
 
 #app {
   position: relative;
-  /* background: url("/img/8.jpg") ; */
+  /* background: linear-gradient(rgba(49, 49, 49, .5)), */
+  /* url("/img/child.jpg"); */
   background-size: cover;
 }
 
@@ -176,6 +177,7 @@ h1 {
 #particles-js {
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255);
+  background: linear-gradient(rgba(49, 49, 49, .5)),
+  url("/img/child.jpg");
 }
 </style>
