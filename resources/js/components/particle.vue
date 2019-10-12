@@ -36,7 +36,7 @@ export default {
       window.particlesJS("particles-js", {
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": 50,
                         "density": {
                             "enable": true,
                             "value_area": 700
@@ -63,7 +63,7 @@ export default {
                         },
                     },
                     "opacity": {
-                        "value": .9,
+                        "value": .5,
                         "random": true,
                         "anim": {
                             "enable": false,
@@ -76,7 +76,7 @@ export default {
                         "value": 10,
                         "random": true,
                         "anim": {
-                            "enable": false,
+                            "enable": true,
                             "speed": 40,
                             "size_min": 0.1,
                             "sync": false
@@ -85,8 +85,8 @@ export default {
                     "line_linked": {
                         "enable": true,
                         "distance": 150,
-                        "color": "#333",
-                        "opacity": 0.1,
+                        "color": "#fff",
+                        "opacity": 1,
                         "width": 1
                     },
                     "move": {
@@ -98,7 +98,7 @@ export default {
                         "out_mode": "out",
                         "bounce": false,
                         "attract": {
-                            "enable": false,
+                            "enable": true,
                             "rotateX": 600,
                             "rotateY": 1200
                         }
