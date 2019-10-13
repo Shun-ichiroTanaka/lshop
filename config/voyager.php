@@ -13,8 +13,9 @@ return [
     'user' => [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
-        'default_avatar'               => 'users/default.png',
-        'redirect'                     => '/admin',
+        'admin_permission'             => 'browse_admin',
+        'namespace'                    => App\User::class,
+        'redirect'                     => '/admin'
     ],
 
     /*
@@ -27,7 +28,8 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'App\\Http\\Controllers\\Voyager', //コントローラーの配置先を記述します
+        // 'namespace' => 'App\\Http\\Controllers\\Voyager',
+        'namespace' => 'TCG\\Voyager\\Http\\Controllers',
     ],
 
     /*
@@ -55,7 +57,7 @@ return [
     */
 
     'storage' => [
-        'disk' => env('FILESYSTEM_DRIVER', 'public'),
+        'disk' => 'public',
     ],
 
     /*
@@ -82,8 +84,8 @@ return [
         'tables' => [
             'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
         ],
-        'autoload_migrations' => true,
-    ],
+    'autoload_migrations' => true,
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -195,6 +197,8 @@ return [
     'additional_js' => [
         'js/custom.js',
     ],
+
+    'assets_path' => '/vendor/tcg/voyager/assets',
 
     'googlemaps' => [
          'key'    => env('GOOGLE_MAPS_KEY', ''),
